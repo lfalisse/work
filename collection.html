@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Work - LMDF</title>
+<style>
+body{
+	font-family:helvetica;
+}
+.parent {
+margin: 16%;
+    margin-top: 30px;
+    width: 78%;
+    /* margin-right: 131px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(6,3fr); */
+    grid-column-gap: 50px;
+    grid-row-gap: 5px;
+}
+.image{
+width: 100%;
+    /* height: 120%; */
+    object-fit: cover;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #000;
+}
+#bio{
+	line-height: 1.6;
+}
+.class{
+	line-height: 5%;
+    font-size: 75%;
+    margin-bottom: 7%;
+}
+img{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+a{
+	color: black;
+}
+a:hover{
+	color: #0000EE;
+}
+#blue{
+	color:#0000EE;
+}
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 35px;
+  overflow: auto;
+  border-right: 1px solid #000;
+  line-height: 72%;
+  padding-top: 1%;
+  padding-right: 2%;
+}
+
+.sidenav a {
+  /*padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;*/
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+div.parent {
+  margin-left: 300px;
+  padding: 1px 16px;
+}
+.embed{
+	padding-bottom: 5px;
+}
+.title{
+	text-decoration: underline;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+   	<p>Louis Falisse</p>
+  	<a id='blue' href='index.html'>design</a>
+	<p>New York, NY</p>
+	<p>+1 347 241 9852</p>
+	<p>lfalisse@gmail.com</p>
+	<br>
+	<p id='bio'>Louis Falisse is a Communication Designer from Brussels, Belgium. Louis practices graphic, editorial, and web design with a passion in photography, architecture, and product design. Inspired by European art movements such as brutalism and bauhaus, Louis’ work is intentional and functional with an emphasis on proportion and alignment.</p>
+</div>
+<div class="parent">
+	<div class='image'>
+		<img src='img/collections2.png'>
+	</div>
+	<div class='desc'>
+		<p class='title'>COLLECTION: PORTRAITS</p>
+		<p class='class'>Web Archive</p>
+
+		<p class='description'>
+			Excel-fed, self coded program with javascript and jquery for organizing my portrait archive.
+			<p class='embed'><a href='https://lfalisse.github.io/ci19/studio/collection/index.html' target="_blank">Link Here</a></p>
+	</div>
+	<div class='image'>
+		<img src='img/collections.png'>
+	</div>
+	<div class='desc'></div>
+	<div class='image'>
+		<img src='img/collections3.png'>
+	</div>
+</div>
+</body>
+</html>
