@@ -63,13 +63,13 @@ margin: 16%;
     width: 78%;
     /* margin-right: 131px; */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(6,3fr); */
+    /*grid-template-columns: repeat(2, 1fr);*/
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-column-gap: 50px;
     grid-row-gap: 5px;
 }
 .image{
-width: 100%;
+width: 120%;
     /* height: 120%; */
     object-fit: cover;
     overflow: hidden;
@@ -82,6 +82,10 @@ width: 100%;
 }
 #bio{
 	line-height: 1.6;
+}
+.desc{
+	position: relative;
+    padding-left: 26px;
 }
 .class{
 	line-height: 5%;
@@ -132,8 +136,7 @@ a:hover{
   color: #f1f1f1;
 }
 div.parent {
-  margin-left: 300px;
-  padding: 1px 16px;
+  padding: 1px;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -146,7 +149,11 @@ div.parent {
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
 }
-
+/*@media screen and (max-width: 600px) {
+  .parent {
+    grid-template-columns: (1, 1fr);
+  }
+}*/
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
   .sidebar a {
@@ -190,14 +197,28 @@ div.parent {
 </div>
 <div class="parent">
 	<div class='image'>
+		<a href='frame'><img src='img/coversblu.png'></a>
+	</div>
+	<div class='desc'>
+		<p class='title'><a href='ourframe'>Our (Communal) Frame of Sight</a></p>
+		<p class='class'>Editorial (Typology)</p>
+	</div>
+	<div class='image'>
+		<a href='olivetti'><img src='img/stormking.png'></a>
+	</div>
+	<div class='desc'>
+		<p class='title'><a href='fancy'>Blocks<span style='font-style:italic'>Make Believe</span></a></p>
+		<p class='class'>Editorial (Graphic Design)</p>
+	</div>
+	<div class='image'>
 		<a href='frame'><img src='img/framecovers2.png'></a>
+	</div>
+	<div class='desc'>
+		<p class='title'><a href='frame'>(Individual) Frame of Sight</a></p>
+		<p class='class'>Editorial (Typology)</p>
 	</div>
 	<div class='image'>
 		<a href='olivetti'><img src='img/olivetti.jpg'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='frame'>Frame of Sight</a></p>
-		<p class='class'>Editorial (Typology)</p>
 	</div>
 	<div class='desc'>
 		<p class='title'><a href='olivetti'>Winnow: <span style='font-style:italic'>Olivetti</span></a></p>
@@ -206,12 +227,12 @@ div.parent {
 	<div class='image'>
 		<a href='35mm'><img src='img/35mm.png'></a>
 	</div>
-	<div class='image'>
-		<a href='collection'><img src='img/collections.png'></a>
-	</div>
 	<div class='desc'>
 		<p class='title'><a href='35mm'>35 MM [...] IN THE LES</a></p>
 		<p class='class'>Editorial (Wiki)</p>
+	</div>
+	<div class='image'>
+		<a href='collection'><img src='img/collections.png'></a>
 	</div>
 	<div class='desc'>
 		<p class='title'><a href='collection'>COLLECTION: PORTRAITS</a></p>
@@ -220,12 +241,13 @@ div.parent {
 	<div class='image'>
 		<a href='blocks'><img src='img/blocks.png'></a>
 	</div>
-	<div class='image'>
-		<a href='furniture'><img src='img/furniture.png'></a>
-	</div>
+
 	<div class='desc'>
 		<p class='title'><a href='blocks'>Blocks</a></p>
 		<p class='class'>Editorial — Documentary (w/ Web Component)</p>
+	</div>
+	<div class='image'>
+		<a href='furniture'><img src='img/furniture.png'></a>
 	</div>
 	<div class='desc'>
 		<p class='title'><a href='furniture'>Furniture</a></p>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Primary Meta Tags -->
+<title>Atelier Piou</title>
+<meta name="title" content="Atelier Piou">
+<meta name="description" content="Louis Falisse's Studio and Portfolio.">
+<meta property="og:image" content="img/pioupp.jpg">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="lfalisse.net/frame">
+<meta property="og:title" content="Atelier Piou">
+<meta property="og:description" content="Louis Falisse's Studio and Portfolio.">
+<meta property="og:image" content="img/pioupp.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="lfalisse.net">
+<meta property="twitter:title" content="Atelier Piou">
+<meta property="twitter:description" content="Louis Falisse's Studio and Portfolio.">
+<meta property="twitter:image" content="img/pioupp.jpg">
+
+<script type="text/javascript">
+var now = new Date();
+var hours = now.getHours();
+document.bgColor="#F5F5F5";
+//22-4 night
+if (hours > 21 || hours < 5){
+ document.write ('<body style="background-color: #353C45">');
+}
+//20-21 night
+else if (hours > 19 && hours < 22){
+ document.write ('<body style="background-color: #505A68">');
+}
+//18-19 night
+else if (hours > 17 && hours < 20){
+ document.write ('<body style="background-color: #758295">');
+}
+//9-17 day
+else if (hours > 8 && hours < 18){
+ document.write ('<body style="background-color: #97A0AF">');
+}
+//7-8 day
+else if (hours > 6 && hours < 9){
+ document.write ('<body style="background-color: #C4C9D4">');
+}
+//5-6 day
+else if (hours > 4 && hours < 7){
+ document.write ('<body style="background-color: #F5F5F5">');
+}
+else {
+ document.write ('<body style="background-color: white">');
+}
+</script>
+<style>
+body{
+	font-family:helvetica;
+}
+.parent {
+margin: 16%;
+    margin-top: 30px;
+    width: 78%;
+    /* margin-right: 131px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(6,3fr); */
+    grid-column-gap: 50px;
+    grid-row-gap: 5px;
+}
+.image{
+width: 100%;
+    /* height: 120%; */
+    object-fit: cover;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #000;
+}
+#bio{
+	line-height: 1.6;
+}
+.class{
+  line-height: 5%;
+  font-size: 75%;
+  margin-bottom: 2.5%;
+  font-weight: bold;
+}
+.class1{
+  color: red;
+  line-height: 5%;
+  font-size: 75%;
+  margin-bottom: 7%;
+}
+.title{
+  text-decoration: underline;
+  margin-bottom:2px;
+}
+.description{
+  line-height: 1.5;
+}
+img{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+a{
+	color: black;
+}
+a:hover{
+	color: #0000EE;
+}
+#blue{
+	color:#0000EE;
+}
+#transcript{
+	font-weight: 200;
+}
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 35px;
+  overflow: auto;
+  border-right: 1px solid #000;
+  line-height: 72%;
+  padding-top: 1%;
+  padding-right: 2%;
+}
+
+.sidenav a {
+  /*padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;*/
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+div.parent {
+  margin-left: 300px;
+  padding: 1px 16px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+/*@media screen and (max-width: 600px) {
+  .parent {
+    grid-template-columns: (1, 1fr);
+  }
+}*/
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+   	<p>Louis Falisse</p>
+  	<a id='blue' href='index'>design</a>
+	<p>New York, NY</p>
+	<p>+1 347 241 9852</p>
+	<p>lfalisse@gmail.com</p>
+	<br>
+	<p id='bio'>Louis Falisse is a Communication Designer from Brussels, Belgium. Louis practices graphic, editorial, and web design with a passion in photography, architecture, and product design. Inspired by European art movements such as brutalism and bauhaus, Louis’ work is intentional and functional with an emphasis on proportion and alignment.</p>
+</div>
+<div class="parent">
+	<div class='image'>
+		<iframe style="width:100%;height:600px" src="https://online.fliphtml5.com/zghgx/wseq/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+	</div>
+	<div class='desc'>
+		<p class='title'>Our (Communal) Frame of Sight</p>
+		<p class='class'>Editorial Publication (Typology)</p>
+    <p class='class1'>In Progress</p>
+		<p class='description'> Hey there ladies and gents, as many of you may know I’ve been working on a ‘window’ series for my thesis this year.<br><br> As of late i’ve been wanting to capture every window, an impossible task. Instead I created this two step book, ‘Our (Communal) Frame of Sight’, with the intention of producing a workbook providing readers with context on my works as well as a request for your individual participation.<br><br>I would love for you all to participate by capturing window images, and forwarding them to me. I will then edit, classify, and archive all the images I receive into our very own community archive book,<span style='font-weight:bold'>‘Our (Communal) Frame of Sight’</span>.<br><br> <a href="communal.pdf" download>PDF Link (Not a download)</a></p>
+  </div>
+  <div class='image'>
+		<img src='img/coversblu.png'>
+	</div>
+	<div class='desc' id='Transcript' style="font-weight: 100;"><span style='font-weight:400'>Book Transcript</span><br><br><br>My dear reader,
+It is with sincere hope of understanding
+that this publication was (and will be)
+collected, categorized, and compiled. A
+hope that one may achieve a heightened
+awareness to the power of framing and
+the occasional lack thereof. Windows are
+not to be reduced to a simple passage of
+light, they are to be praised for everything more that they hold.<br><br><br>With this project I’d like to stress the beauty of human
+thought. The slight uniqueness and vivid purpose in
+each brick laid. The individual thought and process to
+each frame, each glass pane, each fragment of view.
+<br><br>
+With this booklet, pamphlet, map; I’d like to take
+advantage of this unique opportunity afforded to us by
+covid to arrange a community made archive, collection,
+book.<br><br><br>Some tips are below to help your
+image taking process.
+</div>
+	<div class='image'>
+		<img src='img/page6n7.jpg'>
+	</div>
+	<div class='desc' style="font-weight: 100;">
+ To capture straight images, start by
+heading to your phone settings and locating the <span style='font-weight:400'>camera settings</span>, continue by
+toggling the <span style='font-weight:400'>“grid” on.</span><br><br>
+After stumbling upon a window of interest, <span style='font-weight:400'>hold your arms out above and in
+front of you</span> and attempt to capture a
+<span style='font-weight:400'>focused, and relatively flat image.</span><br><br>
+ Look for: <span style='font-weight:400'>light, shadow, gates, bricks,
+interior, exterior</span>.<br><br>
+ there’s <span style='font-weight:400'>no need to go on a trip</span>, Many
+of my photographs are from my own
+neighborhood and i’d love to see how you
+capture yours.<br><br><br>PLEASE FORWARD YOUR WINDOWS TO:
+LFALISSE@GMAIL.COM
+	</div>
+	<div class='image'>
+		<img src='img/page10n11.jpg'>
+	</div>
+</div>
+</body>
+</html>
