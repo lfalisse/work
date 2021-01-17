@@ -20,7 +20,7 @@
 <meta property="twitter:title" content="Atelier Piou">
 <meta property="twitter:description" content="Louis Falisse's Studio and Portfolio.">
 <meta property="twitter:image" content="img/pioupp.jpg">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script type="text/javascript">
 var now = new Date();
 var hours = now.getHours();
@@ -57,44 +57,8 @@ else {
 body{
 	font-family:helvetica;
 }
-.parent {
-margin: 16%;
-    margin-top: 30px;
-    width: 78%;
-    /* margin-right: 131px; */
-    display: grid;
-    /*grid-template-columns: repeat(2, 1fr);*/
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-column-gap: 50px;
-    grid-row-gap: 5px;
-}
-.image{
-width: 120%;
-    /* height: 120%; */
-    object-fit: cover;
-    overflow: hidden;
-    text-align: center;
-    border: 1px solid #000;
-    background-color: white;
-}
-.image:hover{
-	border: 1px solid #0000EE;
-}
-#bio{
-	line-height: 1.6;
-}
-.desc{
-	position: relative;
-    padding-left: 26px;
-}
-.class{
-	line-height: 5%;
-    font-size: 75%;
-    margin-bottom: 7%;
-}
-.title{
-	font-weight: bold;
-	margin-bottom:2px;
+* {
+  box-sizing: border-box;
 }
 img{
 	width:100%;
@@ -110,20 +74,53 @@ a:hover{
 #blue{
 	color:#0000EE;
 }
+.image{
+	width: 100%;
+    /* height: 120%; */
+    object-fit: cover;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: white;
+}
+.image:hover{
+	border: 1px solid #0000EE;
+}
+#bio{
+	line-height: 1.6;
+}
+.class{
+	line-height: 5%;
+    font-size: 75%;
+    margin-bottom: 7%;
+}
+.title{
+	font-weight: bold;
+	margin-bottom:2px;
+}
+#page{
+  height:100%;
+  padding-left:10%; // equal to the width of sidebar
+}
+#main {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 1.5%;
+}
 .sidenav {
-  height: 100%;
-  width: 160px;
   position: fixed;
+  top: 0%;
+  left: 2%;
+  width: 10%;
+  height: 100%;
   z-index: 1;
-  top: 0px;
-  left: 35px;
   overflow: auto;
   border-right: 1px solid #000;
   line-height: 72%;
   padding-top: 1%;
   padding-right: 2%;
 }
-
 .sidenav a {
   /*padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -136,37 +133,78 @@ a:hover{
   color: #f1f1f1;
 }
 div.parent {
-  padding: 1px;
+  margin-left: 300px;
+  padding: 1px 16px;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding-right: 1.5%;
+}
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 1.5%;
 }
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
+@media screen and (max-width: 850px) {
+  .sidenav {
     width: 100%;
     height: auto;
     position: relative;
+    left:0%;
+    border-right: 0px solid #000;
   }
-  .sidebar a {float: left;}
+  .sidenav a {float: left;}
   div.content {margin-left: 0;}
-}
-/*@media screen and (max-width: 600px) {
-  .parent {
-    grid-template-columns: (1, 1fr);
+
+  #page{
+  	margin: 3%;
+    padding-left: 0%;
   }
-}*/
+   #main{
+  	padding-top: 10%
+  }
+ }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 850px) {
+  .column {
+  float: left;
+  width: 100%;
+  padding-right: 1.5%;
+}
+.column1 {
+  float: left;
+  width: 100%;
+  padding-left: 1.5%;
+}
+}
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+
 @media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
+  .sidenav a {
+    /*text-align: center;*/
     float: none;
   }
 }
-}
+
 </style>
 </head>
 <body>
-<div class="sidenav">
-   	<p>Louis Falisse</p>
+<div id='page'>
+ <div class="sidenav">
+   	<p style='font-weight:bold'>Louis Falisse</p>
   	<a id='blue' href='index'>design</a>
 	<p>New York, NY</p>
 	<p>+1 347 241 9852</p>
@@ -178,81 +216,73 @@ div.parent {
 	<br>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<a id='blue' href='https://www.instagram.com/atelier.piou/' target="_blank">social</a>
+ </div>
+<div id='main'>
+	<div class="row">
+	  <div class="column">	
+		<div class='image'>
+			<a href='frame'><img src='img/framecovers2.png'></a>
+		</div>
+		<div class='desc'>
+			<p class='title'><a href='frame'>Frame of Sight</a></p>
+			<p class='class'>Editorial (Typology)</p>
+		</div>
+	 </div>
+	
+	  <div class="column1">	
+		<div class='image'>
+			<a href='olivetti'><img src='img/olivetti.jpg'></a>
+		</div>
+		<div class='desc'>
+			<p class='title'><a href='olivetti'>Winnow: <span style='font-style:italic'>Olivetti</span></a></p>
+			<p class='class'>Editorial (Archive)</p>
+		</div>
+	   </div>
+	</div>
+	<div class="row">
+	  <div class="column">	
+		<div class='image'>
+			<a href='35mm'><img src='img/35mm.png'></a>
+		</div>
+		<div class='desc'>
+			<p class='title'><a href='35mm'>35 MM [...] IN THE LES</a></p>
+			<p class='class'>Editorial (Wiki)</p>
+		</div>
+	 </div>
+	
+	  <div class="column1">	
+		<div class='image'>
+			<a href='collection'><img src='img/collections.jpg'></a>
+		</div>
+		<div class='desc'>
+			<p class='title'><a href='collection'>COLLECTION: PORTRAITS</a></p>
+			<p class='class'>Web Archive</p>
+		</div>
+	   </div>
+	</div>
+	<div class="row">
+	  <div class="column">	
+		<div class='image'>
+			<a href='blocks'><img src='img/blocks.png'></a>
+		</div>
+		<div class='desc'>
+			<p class='title'><a href='blocks'>Blocks</a></p>
+			<p class='class'>Editorial — Documentary (w/ Web Component)</p>
+		</div>
+	 </div>
+	
+	  <div class="column1">	
+		<div class='image'>
+			<a href='furniture'><img src='img/furniture.png'></a>
+		</div>
+		<div class='desc'>
+			<p class='title'><a href='furniture'>Furniture</a></p>
+			<p class='class'>Generative Book</p>
+		</div>
+	   </div>
+	</div>
 </div>
-<div class="parent">
-	<div class='image'>
-		<a href='frame'><img src='img/coversblu.png'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='ourframe'>Our (Communal) Frame of Sight</a></p>
-		<p class='class'>Editorial (Typology)</p>
-	</div>
-	<div class='image'>
-		<a href='olivetti'><img src='img/stormking.png'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='fancy'>Blocks<span style='font-style:italic'>Make Believe</span></a></p>
-		<p class='class'>Editorial (Graphic Design)</p>
-	</div>
-	<div class='image'>
-		<a href='frame'><img src='img/framecovers2.png'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='frame'>(Individual) Frame of Sight</a></p>
-		<p class='class'>Editorial (Typology)</p>
-	</div>
-	<div class='image'>
-		<a href='olivetti'><img src='img/olivetti.jpg'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='olivetti'>Winnow: <span style='font-style:italic'>Olivetti</span></a></p>
-		<p class='class'>Editorial (Archive)</p>
-	</div>
-	<div class='image'>
-		<a href='35mm'><img src='img/35mm.png'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='35mm'>35 MM [...] IN THE LES</a></p>
-		<p class='class'>Editorial (Wiki)</p>
-	</div>
-	<div class='image'>
-		<a href='collection'><img src='img/collections.png'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='collection'>COLLECTION: PORTRAITS</a></p>
-		<p class='class'>Web Archive</p>
-	</div>
-	<div class='image'>
-		<a href='blocks'><img src='img/blocks.png'></a>
-	</div>
-
-	<div class='desc'>
-		<p class='title'><a href='blocks'>Blocks</a></p>
-		<p class='class'>Editorial — Documentary (w/ Web Component)</p>
-	</div>
-	<div class='image'>
-		<a href='furniture'><img src='img/furniture.png'></a>
-	</div>
-	<div class='desc'>
-		<p class='title'><a href='furniture'>Furniture</a></p>
-		<p class='class'>Generative Book</p>
-	</div>
 </div>
 </body>
 </html>
