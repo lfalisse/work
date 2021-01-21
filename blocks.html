@@ -20,39 +20,6 @@
 <meta property="twitter:title" content="Atelier Piou">
 <meta property="twitter:description" content="Louis Falisse's Studio and Portfolio.">
 <meta property="twitter:image" content="img/pioupp.jpg">
-
-<script type="text/javascript">
-var now = new Date();
-var hours = now.getHours();
-document.bgColor="#F5F5F5";
-//22-4 night
-if (hours > 21 || hours < 5){
- document.write ('<body style="background-color: #353C45">');
-}
-//20-21 night
-else if (hours > 19 && hours < 22){
- document.write ('<body style="background-color: #505A68">');
-}
-//18-19 night
-else if (hours > 17 && hours < 20){
- document.write ('<body style="background-color: #758295">');
-}
-//9-17 day
-else if (hours > 8 && hours < 18){
- document.write ('<body style="background-color: #97A0AF">');
-}
-//7-8 day
-else if (hours > 6 && hours < 9){
- document.write ('<body style="background-color: #C4C9D4">');
-}
-//5-6 day
-else if (hours > 4 && hours < 7){
- document.write ('<body style="background-color: #F5F5F5">');
-}
-else {
- document.write ('<body style="background-color: white">');
-}
-</script>
 <style>
 body{
 	font-family:helvetica;
@@ -192,5 +159,46 @@ div.parent {
 		<img src='img/blocks2.png'>
 	</div>
 </div>
+<script type="text/javascript">
+var now = new Date();
+var hours = now.getHours();
+document.bgColor="#F5F5F5";
+//22-4 night
+document.addEventListener("DOMContentLoaded", function(event){
+if (hours > 21 || hours < 5){
+ document.body.style.backgroundColor = "rgb(12 24 88)";
+ document.getElementById("page").style.color="#d3dcf5";
+}
+//18-21 night
+else if (hours > 17 && hours < 22){
+ document.body.style.backgroundColor = "rgb(100 105 132)";
+ document.getElementById("page").style.color="#d59380";
+}
+//15-17 day
+else if (hours > 14 && hours < 18){
+ document.body.style.backgroundColor = "#e8d1bf";
+ document.getElementById("page").style.color="#284727";
+}
+//9-14 day
+else if (hours > 8 && hours < 13){
+ document.body.style.backgroundColor = "#f3d8b5";
+ document.getElementById("page").style.color="#557a9c";
+}
+//7-8 day
+else if (hours > 6 && hours < 9){
+ document.body.style.backgroundColor = "#9aa38e";
+ document.getElementById("page").style.color="#f1e0d2";
+}
+//5-6 day
+else if (hours > 4 && hours < 7){
+ document.body.style.backgroundColor = "#e39f77";
+ document.getElementById("page").style.color="#464658";
+}
+else {
+ document.body.style.backgroundColor = "#f3d8b5";
+ document.getElementById("page").style.color="#557a9c";
+}
+});
+</script>
 </body>
 </html>
